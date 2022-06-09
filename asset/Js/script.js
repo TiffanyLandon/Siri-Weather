@@ -17,7 +17,7 @@ if (!localStorage.getItem("cities")) {
 
 
 var getWeatherConditions = function(city) {
-    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+apiKey+"&units=imperial"
+    var apiUrl = "https://api.openweathermap.org/data/3.0/weather?q="+city+"&appid="+apiKey+"&units=imperial"
     fetch(apiUrl).then(function(response) {
         if (response.ok) {
             response.json().then(function(data) {    
@@ -46,7 +46,7 @@ function getUVIndex(lat,lng) {
       beforeSend: function(request) {
         request.setRequestHeader('x-access-token', '65113a2397cbf76a91327f31e2bcf2db');
       },
-      url: 'https://api.openuv.io/api/v1/uv?lat=' + lat + '&lng=' + lng,
+      url: 'https://api.openweathermap.org/data/3.0/onecall?lat=' + lat + '&lng=' + lng,
       success: function(response) {
         var uv = response.result.uv
         var frcUV = $("<p>")
@@ -126,7 +126,7 @@ var displayCurrentDay = function(data,currentCity) {
 }
 
 var displayDailyForecast = function(currentCity) {
-    let forecastQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + currentCity + "&cnt=4&appid=" + apiKey+"&units=imperial"
+    let forecastQueryURL = "https://api.openweathermap.org/data/3.0/forecast?q=" + currentCity + "&cnt=4&appid=" + apiKey+"&units=imperial"
     fetch(forecastQueryURL).then(function(response) {
         if (response.ok) {
             response.json().then(function(data) {    
