@@ -34,7 +34,7 @@ var saveSearch = function () {
 
 var getWeather = function (city) {
     // personal api key to access OpenWeatherAPI
-    var apikey = 'd4659d25640fa02de6562117fdedf357';
+    var apiKey = 'd4659d25640fa02de6562117fdedf357';
     // format the Open Weather api url
     var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + apiKey;
 
