@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-Dashboard</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="shortcut icon" href="">
+</head>
+
+<body>
+    <div class="p-3 mb-2 text-white header"
+        style="background-image: linear-gradient(to right, rgb(111, 144, 13), rgb(132, 180, 123));">
+        <h1 class="text-center">WEATHER-DASHBOARD</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+                <div class="search-box d-flex flex-column " style="border-bottom: 1px solid black;">
+                    <h3 class="">INPUT YOUR DESIRED CITY</h3>
+                    <input class="m-1 " type="text" placeholder="Your City" id="inputSearch">
+                    <button class="btn btn-primary mb-1" id="search-button">Search</button>
+                </div>
+                <div class="cities-container d-flex flex-column" id="search-history">
+                    <div class="d-flex flex-column" id="cities">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 p-1" id="currentDay" style="border: 1px solid black;">
+
+                        </div>
+                        <div class="col-12">
+                            <h4>YOUR 4-DAY-FORECAST</h4>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-between" id="forecast-cards">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="./asset/Js/weather-api.js"></script>
+</body>
+
+</html>
